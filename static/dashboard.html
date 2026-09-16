@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiStation dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/dashboard.css">
+</head>
+<body>
+  <main class="dashboard-shell">
+    <header class="dashboard-header">
+      <a class="brand" href="/"><span class="brand-mark">SF</span><span>STATION<br>FRIEND</span></a>
+      <div><p class="overline">BROADCAST CONTROL</p><h1>Good morning, broadcaster.</h1></div>
+      <a class="back-link" href="/">VIEW PLAYER ↗</a>
+    </header>
+
+    <section class="summary-row">
+      <div class="summary-intro"><p class="overline">OVERVIEW</p><h2>Your station at a glance.</h2><p>Live service health and listener activity, updated every five seconds.</p></div>
+      <div class="stat-card"><span>LISTENERS NOW</span><strong id="listeners">—</strong><small id="listenerDelta">Waiting for data</small></div>
+      <div class="stat-card"><span>BROADCAST STATUS</span><strong class="status-value" id="source">—</strong><small id="currentFile">No source selected</small></div>
+      <div class="stat-card"><span>ENCODING</span><strong id="bitrate">—</strong><small>MP3 stream</small></div>
+    </section>
+
+    <section class="content-grid">
+      <article class="panel listener-panel">
+        <div class="panel-header"><div><p class="overline">AUDIENCE</p><h3>Listeners over time</h3></div><span class="live-pill"><i></i> LIVE</span></div>
+        <div class="chart-wrap"><svg id="listenerChart" viewBox="0 0 760 270" role="img" aria-label="Listener count over time"></svg></div>
+        <div class="chart-footer"><span>LAST 30 MINUTES</span><strong id="chartRange">Collecting live data…</strong></div>
+      </article>
+
+      <article class="panel source-panel">
+        <div class="panel-header"><div><p class="overline">TRANSMISSION</p><h3>Current source</h3></div><span class="source-dot" id="sourceDot"></span></div>
+        <div class="source-display"><div class="source-icon">SF</div><div><strong id="sourceName">Offline</strong><p id="trackName">Waiting for a broadcast source</p></div></div>
+        <div class="meter large-meter" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="source-meta"><span>FORMAT <b>MP3</b></span><span>BITRATE <b id="sourceBitrate">—</b></span></div>
+      </article>
+    </section>
+
+    <section class="panel activity-panel">
+      <div class="panel-header"><div><p class="overline">RECENT ACTIVITY</p><h3>Broadcast timeline</h3></div><span class="muted" id="lastUpdated">Updating…</span></div>
+      <div id="activity" class="activity-list"><div class="activity-item"><span class="activity-icon">•</span><div><strong>Dashboard connected</strong><p>Waiting for the first station update.</p></div><time>NOW</time></div></div>
+    </section>
+    <footer><span>© 2026 STATION FRIEND</span><span>MiStation / FASTAPI RADIO</span></footer>
+  </main>
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

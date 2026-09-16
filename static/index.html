@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>STATION FRIEND — live radio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <nav class="topbar">
+      <a class="brand" href="#top"><span class="brand-mark">SF</span><span>STATION<br>FRIEND</span></a>
+      <div class="signal"><span class="nav-air"><i></i><b id="navAir">ON AIR</b></span><span class="live-listeners">LISTENERS <b id="listenerCount">—</b></span></div>
+      <a class="about" href="/dashboard">DASHBOARD <span>↗</span></a>
+    </nav>
+
+    <section class="hero" id="top">
+      <div class="hero-head">
+      <div class="hero-copy">
+          <p class="eyebrow"><span class="live-dot"></span> LIVE PLAYER</p>
+          <h1>Station Friend<br><em>Radio.</em></h1>
+          <span class="listener-note"><span class="pulse"></span> <span id="status">STREAM STANDING BY</span></span>
+        </div>
+        <div class="hero-playback">
+          <div class="hero-record" aria-label="Spinning Station Friend vinyl record">
+            <div class="record"><span>SF</span></div>
+          </div>
+          <div class="actions">
+            <button class="listen" id="listen"><span class="play">▶</span><span id="listenText">LISTEN LIVE</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="player-card">
+      <div class="card-head"><span>NOW TRANSMITTING</span><span class="mono">MP3 / 128 KBPS</span></div>
+      <div class="track-row">
+          <div class="cover"><span>SF</span><small>LIVE<br>FROM<br>HERE</small></div>
+          <div class="track-info"><p class="track-label">THE CURRENT MOMENT</p><h2>Open Mic Transmission</h2><p>No algorithm required</p></div>
+        <div class="meter" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <audio id="audio" preload="none" src="/live.mp3"></audio>
+      </div>
+    </section>
+
+    <footer><span>© 2026 STATION FRIEND</span><span>LIVE AUDIO / VOL. 001</span></footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+:root{--ink:#171714;--paper:#f0eee7;--acid:#d7f04b;--orange:#ff684c;--muted:#9b9a90;--line:rgba(240,238,231,.18)}
+.live-listeners{margin-left:18px;color:var(--paper)}.live-listeners b{color:var(--acid);font-weight:500}.stats-panel{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:26px 0 20px}.stats-heading,.stats-foot{display:flex;justify-content:space-between;align-items:center}.stats-heading .eyebrow{margin:0}.stats-refresh,.stats-foot{font:9px 'DM Mono';letter-spacing:.1em;color:var(--muted)}.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);margin:22px 0 25px}.stat{border-left:1px solid var(--line);padding:0 20px}.stat:first-child{border-left:0;padding-left:0}.stat span{font:9px 'DM Mono';letter-spacing:.12em;color:var(--muted)}.stat strong{display:block;color:var(--acid);font-size:29px;letter-spacing:-.05em;margin-top:9px}.stat strong.status-live{color:var(--orange);font-size:19px;margin-top:15px}.stat strong.offline{color:var(--muted)}.stats-foot{border-top:1px solid var(--line);padding-top:14px}.stats-foot b{color:var(--paper);font-weight:400;margin-left:5px}@media(max-width:700px){.stats-grid{grid-template-columns:repeat(2,1fr);row-gap:25px}.stat:nth-child(3){border-left:0;padding-left:0}.stats-foot{display:block;line-height:2.2}.stats-foot span{display:block}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font-family:'Space Grotesk',sans-serif}body:before{content:'';position:fixed;inset:0;pointer-events:none;opacity:.07;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E")}.shell{max-width:1280px;margin:auto;padding:0 5vw}.topbar{height:92px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;color:var(--paper);text-decoration:none;font-size:11px;line-height:1.02;font-weight:700;letter-spacing:.08em}.brand-mark{display:grid;place-items:center;width:35px;height:35px;border:1px solid var(--paper);border-radius:50%;font:500 12px 'DM Mono'}.signal,.about{font:10px 'DM Mono';letter-spacing:.12em;color:var(--muted)}.signal{display:flex;align-items:center;gap:9px}.signal i,.live-dot{display:inline-block;background:var(--acid);border-radius:50%;width:7px;height:7px;box-shadow:0 0 14px var(--acid)}.about{color:var(--paper);text-decoration:none}.about span{color:var(--acid);font-size:18px;margin-left:7px}.hero{min-height:550px;display:grid;grid-template-columns:1fr 1fr;align-items:center;border-bottom:1px solid var(--line)}.eyebrow,.card-head,.track-label{font:500 11px 'DM Mono';letter-spacing:.16em}.eyebrow{color:var(--acid);display:flex;align-items:center;gap:9px}.hero h1{font-size:clamp(58px,8vw,116px);line-height:.87;letter-spacing:-.08em;margin:24px 0 28px;font-weight:600}.hero h1 em{color:var(--orange);font-style:normal}.dek{color:#b9b7ad;max-width:390px;font-size:15px;line-height:1.55}.actions{display:flex;align-items:center;gap:19px;margin-top:34px}.listen{background:var(--acid);border:0;color:var(--ink);font:600 13px 'DM Mono';padding:16px 19px;cursor:pointer;display:flex;align-items:center;gap:12px}.play{font-size:11px}.listener-note{font:10px 'DM Mono';color:var(--muted);letter-spacing:.06em}.pulse{display:inline-block;width:6px;height:6px;background:var(--orange);border-radius:50%}.orbital{position:relative;width:min(37vw,390px);aspect-ratio:1;margin:auto;display:grid;place-items:center}.dial{width:54%;aspect-ratio:1;border-radius:50%;background:var(--orange);color:var(--ink);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 0 0 18px var(--ink),0 0 0 19px var(--orange);transform:rotate(-12deg)}.dial strong{font-size:100px;line-height:.85;letter-spacing:-.14em;margin-right:13px}.dial-small{font:500 10px 'DM Mono';letter-spacing:.15em}.orbit{position:absolute;border:1px solid var(--line);border-radius:50%;inset:2%;transform:rotate(25deg)}.orbit:after{content:'';position:absolute;width:9px;height:9px;border-radius:50%;background:var(--acid);top:16%;right:8%;box-shadow:0 0 18px var(--acid)}.orbit-two{inset:12%;transform:rotate(-55deg);border-color:rgba(215,240,75,.35)}.orbit-two:after{top:auto;bottom:6%;right:auto;left:18%;background:var(--orange);box-shadow:0 0 18px var(--orange)}.tick{position:absolute;width:1px;height:22px;background:var(--paper);opacity:.6}.tick-a{top:2%;left:50%;transform:rotate(25deg)}.tick-b{bottom:7%;left:16%;transform:rotate(-55deg)}.tick-c{right:2%;top:48%;transform:rotate(115deg)}.player-card{margin:38px 0;border:1px solid var(--line);padding:21px 25px;background:#1e1e1a}.card-head{display:flex;justify-content:space-between;color:var(--muted);font-size:10px}.mono{font-family:'DM Mono'}.track-row{display:flex;align-items:center;gap:20px;margin-top:19px}.cover{width:74px;height:74px;background:var(--acid);color:var(--ink);display:flex;flex-direction:column;justify-content:space-between;padding:9px;font:700 22px 'DM Mono';line-height:.8}.cover small{font-size:7px;line-height:1.1;letter-spacing:.08em}.track-info{flex:1}.track-info h2{font-size:22px;margin:4px 0;font-weight:500}.track-info p{margin:0;color:var(--muted);font-size:12px}.track-label{color:var(--orange)!important;font-size:9px!important}.meter{display:flex;gap:3px;align-items:center;height:32px}.meter span{display:block;width:3px;height:var(--h,18px);background:var(--acid);animation:wave 1s ease-in-out infinite alternate}.meter span:nth-child(2n){--h:27px;animation-delay:.2s}.meter span:nth-child(3n){--h:11px;animation-delay:.4s}.meter span:nth-child(4n){--h:22px;animation-delay:.1s}@keyframes wave{to{transform:scaleY(.35)}}.lower{display:grid;grid-template-columns:1fr 1.3fr .7fr;gap:6vw;padding:45px 0 75px}.lower h3{font-size:35px;line-height:.95;letter-spacing:-.06em;margin:18px 0}.about-copy{color:#b9b7ad;line-height:1.6;font-size:15px;max-width:360px}.frequency{border-left:1px solid var(--line);padding-left:25px;font:10px 'DM Mono';color:var(--muted);letter-spacing:.13em}.frequency strong{display:block;color:var(--acid);font:100px 'Space Grotesk';line-height:.8;margin:18px 0}footer{border-top:1px solid var(--line);padding:23px 0 32px;display:flex;justify-content:space-between;color:var(--muted);font:9px 'DM Mono';letter-spacing:.08em}@media(max-width:700px){.topbar{height:75px}.signal{display:none}.hero{grid-template-columns:1fr;padding:55px 0 50px;min-height:0}.orbital{width:min(75vw,340px);margin-top:55px}.hero h1{font-size:68px}.track-row{align-items:flex-start}.meter{display:none}.lower{grid-template-columns:1fr;gap:25px}.frequency{border:0;border-top:1px solid var(--line);padding:25px 0 0}footer{gap:12px;flex-wrap:wrap}}
+:root{--ink:#171714;--paper:#f0eee7;--acid:#d7f04b;--orange:#ff684c;--muted:#9b9a90;--line:rgba(240,238,231,.18)}
+/* Vinyl artwork follows the live player state. */
+.cover{position:relative;justify-content:flex-end;overflow:hidden}
+.record{position:absolute;inset:5px;border-radius:50%;background:radial-gradient(circle at center,var(--orange) 0 7px,var(--ink) 8px 10px,transparent 11px),repeating-radial-gradient(circle at center,#10110f 0 2px,#292a25 3px 4px);box-shadow:0 0 0 1px rgba(255,255,255,.12);transform:rotate(0deg)}
+.record span{position:absolute;inset:0;display:grid;place-items:center;color:var(--acid);font:500 12px 'DM Mono';letter-spacing:-.08em}
+.record.spinning{animation:spin-record 2.4s linear infinite}
+@keyframes spin-record{to{transform:rotate(360deg)}}
+.cover small{position:relative;z-index:1;color:var(--ink);text-shadow:0 1px 0 rgba(215,240,75,.6)}
+
+/* Roomier, quieter homepage layout. */
+.shell{max-width:1380px;padding:0 6vw}
+.topbar{height:104px}
+.hero{min-height:650px;gap:7vw}
+.hero{min-height:520px;padding:42px 0 48px}
+.hero{display:block;border-bottom:0}
+.hero-head{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:7vw;min-height:360px}
+.nav-air{display:flex;align-items:center;gap:9px;color:var(--paper)}
+.nav-air b{font-weight:500;color:var(--acid)}
+.nav-air b.offline{color:var(--muted)}
+.hero h1{font-size:clamp(52px,6.5vw,88px);line-height:.92;margin:22px 0 34px;letter-spacing:-.075em}
+.actions{margin-top:0}
+.hero-record{width:min(27vw,270px);aspect-ratio:1;margin:auto;display:grid;place-items:center}
+.hero-record .record{position:relative;inset:auto;width:100%;height:100%;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 18px 45px rgba(0,0,0,.28)}
+.hero-record .record span{font-size:24px}
+.hero-playback{display:flex;flex-direction:column;align-items:center;gap:24px}
+.hero-playback .actions{margin:0}
+.hero-playback .listen{min-width:240px;justify-content:center}
+.hero-copy>.listener-note{display:flex;align-items:center;gap:7px;margin-top:-14px}
+.player-card{margin:26px 0 88px;padding:38px 44px;background:#20201c}
+.card-head{font-size:11px}
+.track-row{gap:38px;margin-top:36px;min-height:220px}
+.cover{width:205px;height:205px;padding:18px}
+.record{inset:12px}
+.cover small{font-size:9px}
+.track-info h2{font-size:39px;letter-spacing:-.05em;margin:10px 0 12px}
+.track-info p{font-size:14px}
+.track-label{font-size:10px!important}
+.meter{gap:5px;height:48px}
+.meter span{width:4px}
+.stats-panel{padding:40px 0 28px}
+.stats-heading .eyebrow{font-size:12px;color:var(--paper)}
+.stats-refresh{font-size:10px}
+.stats-grid{margin:30px 0 34px}
+.lower{padding:84px 0 110px;gap:8vw}
+.lower h3{font-size:42px}
+footer{padding-bottom:42px}
+@media(max-width:700px){
+  .shell{padding:0 7vw}
+  .topbar{height:84px}
+  .hero{padding:62px 0 58px;gap:20px}
+  .hero-head{grid-template-columns:1fr;gap:20px;min-height:0}
+  .hero h1{font-size:64px;margin:18px 0 26px}
+  .hero-record{width:min(58vw,220px);margin-top:10px}
+  .hero-playback{gap:18px}
+  .player-card{margin:42px 0 65px;padding:28px 22px}
+  .track-row{gap:22px;margin-top:28px;min-height:0;flex-wrap:wrap}
+  .cover{width:150px;height:150px;padding:13px}
+  .record{inset:8px}
+  .track-info{min-width:180px}
+  .track-info h2{font-size:28px}
+  .stats-panel{padding-top:28px}
+  .lower{padding:65px 0 80px}
+  .lower h3{font-size:36px}
+}
+
+/* The hero and current transmission share one broadcast panel. */
+.hero{
+  margin:42px 0 88px;
+  padding:0 44px 42px;
+  border:1px solid var(--line);
+  background:#20201c;
+}
+.hero-head{
+  padding:42px 0 48px;
+  border-bottom:1px solid var(--line);
+}
+.player-card{
+  margin:0;
+  padding:38px 0 0;
+  border:0;
+  background:transparent;
+}
+@media(max-width:700px){
+  .hero{margin:62px 0 65px;padding:0 22px 28px}
+  .hero-head{padding:0 0 32px}
+  .player-card{padding:28px 0 0}
+}

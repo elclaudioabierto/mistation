@@ -3,6 +3,7 @@ const activity = document.getElementById('activity');
 const chart = document.getElementById('listenerChart');
 let previousSource = null;
 let previousListeners = null;
+const controlMessage = document.getElementById('controlMessage');
 
 function esc(value) { return String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 
@@ -57,6 +58,22 @@ async function refresh() {
     previousListeners = listeners;
   } catch { document.getElementById('lastUpdated').textContent = 'UPDATE FAILED'; }
 }
+
+async function switchSource(source) {
+  const token = document.getElementById('adminToken').value;
+  if (!token) { controlMessage.textContent = 'Enter the admin token first.'; return; }
+  controlMessage.textContent = `Switching to ${source}…`;
+  try {
+    const response = await fetch(`/api/source/${source}`, {method:'POST', headers:{'X-Admin-Token':token}});
+    const data = await response.json();
+    if (!response.ok) throw new Error(data.detail || 'Request failed');
+    controlMessage.textContent = `Source set to ${data.source}.`;
+    addActivity('Source switched', `Broadcast source set to ${data.source}`);
+    refresh();
+  } catch (error) { controlMessage.textContent = error.message; }
+}
+
+document.querySelectorAll('[data-source]').forEach(button => button.addEventListener('click', () => switchSource(button.dataset.source)));
 
 drawChart();
 refresh();

@@ -43,6 +43,19 @@
       <div class="panel-header"><div><p class="overline">RECENT ACTIVITY</p><h3>Broadcast timeline</h3></div><span class="muted" id="lastUpdated">Updating…</span></div>
       <div id="activity" class="activity-list"><div class="activity-item"><span class="activity-icon">•</span><div><strong>Dashboard connected</strong><p>Waiting for the first station update.</p></div><time>NOW</time></div></div>
     </section>
+    <section class="panel controls-panel">
+      <div class="panel-header"><div><p class="overline">SOURCE CONTROL</p><h3>Take over the broadcast</h3></div><span class="muted">ADMIN ONLY</span></div>
+      <div class="controls-body">
+        <p>Switch the live source without restarting MiStation. Mic takeover requires FFmpeg to have access to the configured device.</p>
+        <div class="control-row">
+          <input id="adminToken" type="password" placeholder="Admin token" autocomplete="off">
+          <button data-source="playlist">PLAYLIST</button>
+          <button data-source="mic" class="primary">MIC TAKEOVER</button>
+          <button data-source="offline" class="quiet">STOP</button>
+          <span id="controlMessage" class="control-message" role="status"></span>
+        </div>
+      </div>
+    </section>
     <footer><span>© 2026 STATION FRIEND</span><span>MiStation / FASTAPI RADIO</span></footer>
   </main>
   <script src="/static/dashboard.js"></script>

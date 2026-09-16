@@ -1,0 +1,10 @@
+services:
+  mistation:
+    build: .
+    container_name: mistation
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./media:/app/media

@@ -1,2 +1,16 @@
 #EXTM3U
-# Add one audio file path per line. Paths are relative to MEDIA_DIR.
+recordings/harvard-01.mp3
+assets/station-id.mp3
+assets/pause-8s.mp3
+recordings/harvard-02.mp3
+assets/station-id.mp3
+assets/pause-8s.mp3
+recordings/harvard-03.mp3
+assets/station-id.mp3
+assets/pause-8s.mp3
+recordings/harvard-04.mp3
+assets/station-id.mp3
+assets/pause-8s.mp3
+recordings/harvard-05.mp3
+assets/station-id.mp3
+assets/pause-8s.mp3

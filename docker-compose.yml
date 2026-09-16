@@ -1,4 +1,17 @@
 services:
+  duckdns:
+    image: lscr.io/linuxserver/duckdns:latest
+    container_name: mistation-duckdns
+    restart: unless-stopped
+    environment:
+      PUID: 1000
+      PGID: 1000
+      TZ: America/New_York
+      SUBDOMAINS: mistation
+      TOKEN: ${DUCKDNS_TOKEN:?DUCKDNS_TOKEN must be provided}
+      UPDATE_IP: ipv4
+      LOG_FILE: "false"
+
   mistation:
     build: .
     container_name: mistation
